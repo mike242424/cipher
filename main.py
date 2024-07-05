@@ -1,9 +1,9 @@
-import logo
+from logo import logo
 
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 print("Welcome to....")
-print(logo.logo)
+print(logo)
 go_again = True
 
 def ceasar(input, shift, type):
@@ -40,8 +40,7 @@ while(go_again == True):
 
   if(repeat == 'no'):
     go_again = False
-  elif(repeat == 'yes'):
-    go_again = True
+    print('Program ended.')
   else:
     print('Invalid answer.')
     go_again = False
