@@ -1,17 +1,23 @@
+import logo
+
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-print("Welcome to the cipher program.")
+print("Welcome to....")
+print(logo.logo)
 go_again = True
 
 def ceasar(input, shift, type):
   cipher_message = ''
   for letter in input:
-    old_index = alphabet.index(letter)
-    if(type == 'encode'):
-      new_index = (old_index + shift) % len(alphabet)
-    elif(type == 'decode'):
-      new_index = (old_index - shift) % len(alphabet)
-    cipher_message += alphabet[new_index]
+    if(letter in alphabet):
+      old_index = alphabet.index(letter)
+      if(type == 'encode'):
+        new_index = (old_index + shift) % len(alphabet)
+      elif(type == 'decode'):
+        new_index = (old_index - shift) % len(alphabet)
+      cipher_message += alphabet[new_index]
+  else:
+    cipher_message += letter
   return cipher_message
 
 while(go_again == True):
